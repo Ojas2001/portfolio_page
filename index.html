@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ojas Deodhar | AI & Machine Learning Systems Engineer</title>
+  <meta name="description" content="Portfolio of Ojas Makarand Deodhar - AI/ML Engineer specializing in LLM systems, Intel Gaudi 2 / ONNX inference optimization, and multimodal SLAM.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              indigo: '#6366f1',
+              violet: '#8b5cf6',
+              dark: '#070913',
+              card: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#070913] text-gray-100 min-h-screen relative selection:bg-indigo-500 selection:text-white">
+
+  <!-- Background Orbs & Grid -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+
+  <!-- Sticky Glass Navigation Bar -->
+  <header class="sticky top-0 z-50 glass-nav transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition">
+          OD
+        </div>
+        <span class="font-heading font-bold text-lg tracking-tight group-hover:text-cyan-400 transition">Ojas Deodhar</span>
+        <span class="hidden sm:inline-block text-xs font-mono-code px-2 py-0.5 rounded bg-indigo-950/80 border border-indigo-700/40 text-indigo-300">AI/ML</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#publications" class="hover:text-cyan-400 transition">Publications</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </nav>
+
+      <!-- Right Action CTAs -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="nav-social-btn p-2 rounded-lg border text-gray-200 hover:text-white transition flex items-center justify-center shadow-sm" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg class="w-[18px] h-[18px] fill-none stroke-current" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <!-- Social Quick Links (Crisp high-contrast vector icons) -->
+        <a href="https://github.com/Ojas2001" target="_blank" rel="noopener noreferrer" class="nav-social-btn p-2 rounded-lg border text-gray-200 hover:text-white transition flex items-center justify-center shadow-sm" title="GitHub Profile (@Ojas2001)" aria-label="GitHub Profile">
+          <svg class="w-[18px] h-[18px] fill-current" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/ojas-deodhar" target="_blank" rel="noopener noreferrer" class="nav-social-btn p-2 rounded-lg border text-gray-200 hover:text-white transition flex items-center justify-center shadow-sm" title="LinkedIn Profile (Ojas Deodhar)" aria-label="LinkedIn Profile">
+          <svg class="w-[18px] h-[18px] fill-current" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m-1.4 9.74h2.8v-8.37h-2.8v8.37z"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden nav-social-btn p-2.5 rounded-lg border text-gray-200" aria-label="Open Navigation Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-nav" class="hidden md:hidden glass-panel border-t border-white/10 px-6 py-4 space-y-3">
+      <a href="#about" class="block text-gray-300 hover:text-cyan-400 py-1">About</a>
+      <a href="#experience" class="block text-gray-300 hover:text-cyan-400 py-1">Experience</a>
+      <a href="#projects" class="block text-gray-300 hover:text-cyan-400 py-1">Projects</a>
+      <a href="#skills" class="block text-gray-300 hover:text-cyan-400 py-1">Skills</a>
+      <a href="#publications" class="block text-gray-300 hover:text-cyan-400 py-1">Publications</a>
+      <a href="#contact" class="block text-gray-300 hover:text-cyan-400 py-1">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative z-10 pt-20 pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>MS Computer Engineering @ ASU • Seeking Full-Time AI/ML Roles</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight">
+          Hi, I'm <span class="text-gradient">Ojas Deodhar</span>.
+        </h1>
+
+        <!-- Dynamic Typing Subtitle -->
+        <div class="text-xl sm:text-2xl font-mono-code text-cyan-400 font-semibold min-h-[38px] flex items-center">
+          <span class="text-gray-400 mr-2">&gt;</span>
+          <span id="typed-text"></span>
+          <span class="animate-pulse ml-0.5">_</span>
+        </div>
+
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          AI & Machine Learning Systems Engineer dedicated to end‑to‑end intelligent solutions. I specialize in large‑scale LLM deployment, retrieval‑augmented generation pipelines, multimodal 3D Gaussian Splatting SLAM, computer‑vision model optimization, and hardware‑accelerated inference on Intel Gaudi 2 HPUs, NVIDIA GPUs, and ONNX Runtime. My expertise also spans MLOps, cloud‑native deployment, scalable vector databases, and designing fault‑tolerant RAG systems for real‑world impact.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#experience" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 font-semibold text-white shadow-lg shadow-indigo-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> View Experience
+          </a>
+          <a href="#projects" class="px-6 py-3 rounded-xl glass-panel hover:bg-white/10 font-semibold text-gray-200 border border-white/10 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i> Explore Projects
+          </a>
+          <button class="copy-email-btn px-4 py-3 rounded-xl glass-panel hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition flex items-center gap-2" title="Copy Email">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span class="text-sm">Copy Email</span>
+          </button>
+        </div>
+
+        <!-- Academic & Location Summary -->
+        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-gray-400 font-mono-code">
+          <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i> Tempe, Arizona</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-400"></i> ASU (MS CompEng: 3.81 GPA)</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> IEEE Published Author</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile & Focus Summary Card -->
+      <div class="lg:col-span-5">
+        <div class="glass-panel rounded-2xl p-6 sm:p-7 shadow-2xl border border-white/10 hover-card-glow relative overflow-hidden space-y-5">
+          <div class="flex items-center justify-between pb-3 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+              <span class="text-xs font-mono-code text-gray-300 font-semibold tracking-wide uppercase">Profile Overview</span>
+            </div>
+            <span class="text-[11px] font-mono-code px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Active Candidate</span>
+          </div>
+
+          <div class="space-y-3.5 text-sm">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-mono-code">Education</div>
+                <div class="text-white font-semibold">MS in Computer Engineering</div>
+                <div class="text-xs text-gray-300">Arizona State University (GPA: 3.81 / 4.00)</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-mono-code">Current Role</div>
+                <div class="text-white font-semibold">AI/ML Systems Engineer</div>
+                <div class="text-xs text-gray-300">ASU Decision Theater Network (Supercomputing & RAG)</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-mono-code">Peer-Reviewed Research</div>
+                <div class="text-white font-semibold">IEEE I2CT 2024 Author</div>
+                <div class="text-xs text-gray-300">Shark Tank Deal Prediction via Neural Ensembles</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-violet-500/10 text-violet-400 shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-mono-code">Core Engineering Focus</div>
+                <div class="text-white font-medium text-xs leading-relaxed mt-0.5">
+                  Production LLMs &bull; Hardware Acceleration (Gaudi 2 & CUDA) &bull; Multimodal 3DGS SLAM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+            <span class="text-gray-400 font-mono-code">GitHub Open Source</span>
+            <a href="https://github.com/Ojas2001" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-medium font-mono-code flex items-center gap-1">
+              github.com/Ojas2001 <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About & Engineering Philosophy -->
+  <section id="about" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono-code text-cyan-400 tracking-wider uppercase mb-2">My Engineering Core</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold font-heading">Empowering Scalable AI &amp; Systems Innovation</h3>
+      <p class="text-gray-400 mt-4 text-base sm:text-lg">
+        I don't just call APIs; I engineer end-to-end intelligence systems. From profiling custom kernel execution on supercomputers to building fault-tolerant validation layers, my focus is delivering measurable business and scientific impact.
+      </p>
+    </div>
+
+    <!-- 3 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="glass-panel rounded-2xl p-8 hover-card-glow border border-white/5 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+          <i data-lucide="zap" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold font-heading">High-Performance Inference</h4>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Deep understanding of compute architecture. Optimizing deep learning models via Intel Gaudi 2 (<code class="text-cyan-300">optimum-habana</code>), ONNX quantization, FP16/INT8 weight compression, and CUDA memory management.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-8 hover-card-glow border border-white/5 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Reliable Enterprise RAG</h4>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Bridging natural language to strict schemas. Building Text-to-JSON engines with verification layers, cross-encoder re-ranking fallback pipelines, and semantic caching layers that eliminate repeat token spend.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-8 hover-card-glow border border-white/5 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Frontier Multimodal AI</h4>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Exploring the cutting edge. Researching 3D Gaussian Splatting (GS-SLAM) paired with open-vocabulary vision-language models (MobileCLIP) for real-time edge spatial scene querying and semantic localization.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience & Systems Explorer Section -->
+  <section id="experience" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono-code text-cyan-400 tracking-wider uppercase mb-2">Track Record</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold font-heading">Production Systems & Impact</h3>
+      <p class="text-gray-400 mt-4 text-base">
+        Explore the real-world architectures and platforms I have engineered across public health, government policy, and enterprise AI.
+      </p>
+    </div>
+
+    <!-- ASU Decision Theater Deep-Dive Component -->
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 border border-white/10 mb-12 shadow-2xl">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono-code text-xs font-semibold">Active Role</span>
+            <span class="text-xs text-gray-400">May 2025 – Present</span>
+          </div>
+          <h4 class="text-2xl font-bold font-heading mt-2">ASU – Decision Theater Network</h4>
+          <p class="text-gray-300 font-medium">Graduate AI/ML Systems Engineer <span class="text-xs text-gray-500">(Official Title: Data Analyst)</span> | Tempe, AZ</p>
+        </div>
+        <div class="text-xs font-mono-code text-gray-400 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+          Focus: Supercomputing Inference, Multi-Mode RAG, Geospatial Triage
+        </div>
+      </div>
+
+      <!-- Interactive 7 Systems Selector -->
+      <div class="mt-8">
+        <p class="text-xs font-mono-code text-cyan-400 uppercase tracking-wider mb-3">Interactive System Explorer (Click to Inspect Architecture):</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-indigo-600/30 border border-indigo-500 text-cyan-400 transition" data-sys="tabular-ai">
+            1. Tabular AI & Gaudi 2
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="filter-pipeline">
+            2. Text-to-JSON Engine
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="indicator-search">
+            3. Indicator Search & Fallback
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="policy-cost">
+            4. Policy Cost Recommender
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="backend-cache">
+            5. Backend & Semantic Cache
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="geospatial-triage">
+            6. Geospatial Triage Finder
+          </button>
+          <button class="sys-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition" data-sys="curriculum-rag">
+            7. Curriculum Skills RAG
+          </button>
+        </div>
+
+        <!-- System Detail Card -->
+        <div class="bg-black/40 rounded-2xl p-6 border border-white/10">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <h5 id="sys-title" class="text-xl font-bold font-heading text-white">Autonomous Tabular AI & Supercomputer Inference</h5>
+            <span id="sys-category" class="text-xs font-mono-code px-3 py-1 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+              HPC & Hardware Acceleration
+            </span>
+          </div>
+          <div class="text-xs font-mono-code text-cyan-300 mb-3" id="sys-tech">
+            TableGPT-2, LangChain, Intel Gaudi 2 HPUs, NVIDIA GPUs, optimum-habana, SOL HPC
+          </div>
+          <p id="sys-desc" class="text-gray-300 text-sm leading-relaxed">
+            Architected an autonomous tabular analytics engine on ASU's SOL supercomputing cluster. Orchestrates dynamic Python code generation and execution across complex census and spatial datasets. Deployed optimum-habana to unlock native Gaudi 2 matrix accelerators, cutting query response latencies from seconds to near-real-time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DigitalMain Pvt. Ltd. Experience Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Junior MLE -->
+      <div class="glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4">
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="text-xs text-indigo-400 font-mono-code">Jun 2023 – Jun 2024</span>
+            <h4 class="text-xl font-bold font-heading mt-1">Junior Machine Learning Engineer</h4>
+            <div class="text-sm text-gray-300">DigitalMain Pvt. Ltd. | Pune, India</div>
+          </div>
+          <span class="p-2 rounded-xl bg-white/5 text-cyan-400"><i data-lucide="brain-circuit" class="w-5 h-5"></i></span>
+        </div>
+        <ul class="space-y-2.5 text-sm text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">▹</span>
+            <span>Fine-tuned BERT classifier (<strong class="text-white">92% accuracy</strong>) for production Slack Q&A and deployed <strong class="text-white">BGE-Large cross-encoders</strong>, lifting top-3 search precision to <strong class="text-cyan-300">93%</strong>.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">▹</span>
+            <span>Quantized models via <strong class="text-white">ONNX Runtime</strong>, cutting p95 inference latency by <strong class="text-emerald-400">3.4x</strong> and reducing memory consumption by <strong class="text-emerald-400">45%</strong>.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">▹</span>
+            <span>Benchmarked 5+ foundation LLMs (LLaMA 2, GPT-3.5, Claude, Cohere) with BERTScore & F1; automated RFP proposal drafting, accelerating turnaround by <strong class="text-indigo-300">60%</strong>.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ML Intern -->
+      <div class="glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4">
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="text-xs text-indigo-400 font-mono-code">Aug 2022 – May 2023</span>
+            <h4 class="text-xl font-bold font-heading mt-1">Machine Learning Intern</h4>
+            <div class="text-sm text-gray-300">DigitalMain Pvt. Ltd. | Pune, India</div>
+          </div>
+          <span class="p-2 rounded-xl bg-white/5 text-violet-400"><i data-lucide="database" class="w-5 h-5"></i></span>
+        </div>
+        <ul class="space-y-2.5 text-sm text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-violet-400 mt-1">▹</span>
+            <span>Engineered PDF and web text extraction pipelines (PyPDF2, Regex) to ingest unstructured documents for BERT model training.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-violet-400 mt-1">▹</span>
+            <span>Benchmarked T5, BART, and GPT-2 summarization baselines using BLEU & BERTScore metrics.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-violet-400 mt-1">▹</span>
+            <span>Curated and labeled 10,000+ domain-specific Slack Q&A dialogue pairs, applying SMOTE class balancing for production text classifiers.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-xs font-mono-code text-cyan-400 tracking-wider uppercase mb-2">Portfolio Showcase</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold font-heading">Featured AI & Systems Projects</h3>
+      <p class="text-gray-400 mt-4 text-base">
+        A selection of cutting-edge research, open-source architectures, and real-time inference systems.
+      </p>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mt-8">
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All Projects</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-400 hover:text-white transition" data-filter="llm">LLM Systems & RAG</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-400 hover:text-white transition" data-filter="vision">Computer Vision & Generative</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-400 hover:text-white transition" data-filter="ml">Classical & Deep ML</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-gray-400 hover:text-white transition" data-filter="hardware">Hardware & Systems</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Project 1: Autoencoder & VAE Gaudi 2 vs A100 Benchmark -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="hardware vision">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-mono-code text-xs">Hardware Benchmark</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/Autoencoder_VAE_benchmark_CelebA_face_dataset_Gaudi_2_A100_comparison" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Autoencoder & VAE Benchmark: CelebA (Gaudi 2 vs. A100)</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Benchmarked convolutional Autoencoders and Variational Autoencoders (VAEs) on 200,000+ CelebA face images comparing Intel Gaudi 2 HPUs (Habana SynapseAI) against NVIDIA A100 GPUs (CUDA). Developed a unified PyTorch execution pipeline with automatic hardware detection, evaluating throughput, loss convergence, image reconstruction, and latent generation.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Intel Gaudi 2</span>
+          <span class="tag-pill">NVIDIA A100</span>
+          <span class="tag-pill">PyTorch</span>
+          <span class="tag-pill">VAEs</span>
+          <span class="tag-pill">CelebA</span>
+          <span class="tag-pill">SynapseAI</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Candidate Evaluation & Resume Screening App -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="llm">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono-code text-xs">Production LLM Engine</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/Automated_Resume_Screening_App" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Automated Resume Screening & Candidate Evaluation</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Architected an automated candidate-job parsing engine leveraging Mistral AI and LangChain. Implemented dual PDF/DOCX ingestion, structured JSON extraction with Pydantic validation, match scoring heuristics, interactive Streamlit UI, and automated PDF scorecard generation via ReportLab.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Mistral AI</span>
+          <span class="tag-pill">LangChain</span>
+          <span class="tag-pill">Pydantic</span>
+          <span class="tag-pill">Streamlit</span>
+          <span class="tag-pill">ReportLab</span>
+          <span class="tag-pill">Structured JSON</span>
+        </div>
+      </div>
+
+      <!-- Project 3: Three-Layer MLP from Scratch -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="ml hardware">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono-code text-xs">First-Principles Deep Learning</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/Three_layer_MLP_from_scratch" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Three-Layer Deep MLP from Scratch (NumPy)</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Engineered a 3-layer deep neural network from mathematical first principles in pure Python and NumPy without frameworks. Implemented forward propagation, analytical matrix calculus backpropagation for exact gradient calculation, customizable activations (ReLU, Sigmoid, Softmax), cross-entropy loss, and mini-batch SGD.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">NumPy</span>
+          <span class="tag-pill">Matrix Calculus</span>
+          <span class="tag-pill">Backpropagation</span>
+          <span class="tag-pill">Mini-Batch SGD</span>
+        </div>
+      </div>
+
+      <!-- Project 4: LendingClub Loan Default Prediction -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="ml">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 font-mono-code text-xs">Credit Risk & Tabular ML</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/loan_default_prediction_LendingClub" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">LendingClub Loan Default & Risk Prediction</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Engineered an end-to-end financial risk modeling pipeline on large-scale LendingClub records. Handled high-dimensional feature engineering (debt-to-income, revolving line ratios), missing data imputation, and severe class imbalance via cost-sensitive learning and SMOTE, benchmarking XGBoost, Random Forest, and Logistic Regression.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Scikit-Learn</span>
+          <span class="tag-pill">XGBoost</span>
+          <span class="tag-pill">SMOTE</span>
+          <span class="tag-pill">Pandas</span>
+          <span class="tag-pill">ROC-AUC / PR-AUC</span>
+        </div>
+      </div>
+
+      <!-- Project 5: Semantic GS-SLAM -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="vision llm">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-violet-500/20 text-violet-300 font-mono-code text-xs">ASU Research</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Profile">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Semantic Gaussian Splatting SLAM (GS-SLAM)</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Engineered a real-time semantic SLAM system comparing 3D Gaussian Splatting (GS-SLAM) and ORB-SLAM3 backends, fusing open-vocabulary vision-language embeddings for zero-shot 3D scene querying. Integrated and benchmarked MobileCLIP-S1 vision transformers on resource-constrained edge hardware.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">3D Gaussian Splatting</span>
+          <span class="tag-pill">PyTorch</span>
+          <span class="tag-pill">MobileCLIP-S1</span>
+          <span class="tag-pill">CUDA</span>
+          <span class="tag-pill">ORB-SLAM3</span>
+        </div>
+      </div>
+
+      <!-- Project 6: Shark Tank Deal Prediction (IEEE) -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="ml">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 font-mono-code text-xs">IEEE Publication</span>
+          <div class="flex gap-2">
+            <a href="https://doi.org/10.1109/I2CT61223.2024.10543666" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="IEEE DOI Paper">
+              <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </a>
+            <a href="https://github.com/Ojas2001/Shark-Tank-India-Neural-Networks-Project" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Shark Tank Deal Prediction Engine (IEEE I2CT)</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Engineered dual Artificial Neural Networks and gradient-boosted ensembles (XGBoost, LightGBM) to forecast venture capital deal outcomes and valuations. Addressed severe class imbalances using SMOTE and integrated SHAP explainability. Published at IEEE I2CT 2024.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">ANNs</span>
+          <span class="tag-pill">XGBoost</span>
+          <span class="tag-pill">LightGBM</span>
+          <span class="tag-pill">SMOTE</span>
+          <span class="tag-pill">SHAP</span>
+          <span class="tag-pill">IEEE I2CT</span>
+        </div>
+      </div>
+
+      <!-- Project 7: Fashion-MNIST PCA & Bayesian Decision Theory -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="ml">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-mono-code text-xs">Statistical ML & Density</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/PCA_Density_estimation_Bayesian_Decision_Fashion_MNIST" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Fashion-MNIST PCA & Bayesian Decision Theory</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Implemented statistical machine learning from first principles on Fashion-MNIST. Engineered Principal Component Analysis (PCA) via eigenvalue decomposition for dimensionality reduction and reconstruction variance analysis, Gaussian Parzen-window Kernel Density Estimation (KDE), and Bayesian Decision Theory.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">NumPy</span>
+          <span class="tag-pill">PCA</span>
+          <span class="tag-pill">Kernel Density Estimation</span>
+          <span class="tag-pill">Bayesian Decision</span>
+        </div>
+      </div>
+
+      <!-- Project 8: Denoising MNIST with Autoencoder -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="vision ml">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-300 font-mono-code text-xs">Neural Reconstruction</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/Denoising_MNIST_Handwritten_Digits_with_Autoencoder" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Denoising MNIST Digits with Conv-Autoencoder</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Engineered a deep Convolutional Autoencoder architecture to denoise corrupted handwritten digit images (specifically digits 3, 5, and 8). Injected synthetic Gaussian and salt-and-pepper noise, optimized an encoder-decoder bottleneck, and evaluated latent manifold reconstruction fidelity.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">PyTorch</span>
+          <span class="tag-pill">Conv-Autoencoder</span>
+          <span class="tag-pill">Image Denoising</span>
+          <span class="tag-pill">Latent Spaces</span>
+          <span class="tag-pill">Transposed Convolutions</span>
+        </div>
+      </div>
+
+      <!-- Project 9: AI Blur Studio -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="vision">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono-code text-xs">Live on Hugging Face</span>
+          <div class="flex gap-2">
+            <a href="https://huggingface.co/spaces" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="Live Demo">
+              <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/Ojas2001" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Profile">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">AI Blur Studio – Real-Time Neural Bokeh</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Developed a real-time portrait segmentation and depth-rendering pipeline hosted on Hugging Face Spaces. Leveraged monocular depth estimation models (MiDaS / Depth Anything) and Gradio for sub-50ms bokeh rendering and realistic depth-of-field synthesis.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Depth Anything</span>
+          <span class="tag-pill">MiDaS</span>
+          <span class="tag-pill">Gradio</span>
+          <span class="tag-pill">Hugging Face</span>
+          <span class="tag-pill">Edge CV</span>
+        </div>
+      </div>
+
+      <!-- Project 10: Syntax Analysis & Pass-1 Two-Pass Assembler -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4" data-category="hardware">
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-1 rounded bg-violet-500/20 text-violet-300 font-mono-code text-xs">Systems Programming</span>
+          <div class="flex gap-2">
+            <a href="https://github.com/Ojas2001/Pass-1-for-2-Pass-Compiler" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition" title="GitHub Repository">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-xl font-bold font-heading">Pass-1 Two-Pass Assembler & Syntax Analysis</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Constructed Pass-1 of a two-pass assembler in Python handling assembly instructions, directives, and literals. Engineered symbol tables (SYMTAB), literal tables (LITTAB), pool tables (POOLTAB), and intermediate representation generation with address resolution.
+        </p>
+        <div class="flex flex-wrap gap-1.5 pt-2">
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">Compilers</span>
+          <span class="tag-pill">Assembly</span>
+          <span class="tag-pill">Symbol Tables</span>
+          <span class="tag-pill">Systems Software</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills & Technical Arsenal -->
+  <section id="skills" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono-code text-cyan-400 tracking-wider uppercase mb-2">Capabilities</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold font-heading">Technical Arsenal</h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- 1. Core Languages & Systems -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-cyan-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="code-2" class="w-4 h-4"></i> Core Languages & Systems
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-white font-medium">Python</span>
+          <span class="tag-pill">C / C++</span>
+          <span class="tag-pill">SQL</span>
+          <span class="tag-pill">Bash</span>
+          <span class="tag-pill">Java</span>
+          <span class="tag-pill">Linux Shell</span>
+          <span class="tag-pill">Git / GitHub</span>
+          <span class="tag-pill">Compiler Design</span>
+        </div>
+      </div>
+
+      <!-- 2. Deep Learning & Core Frameworks -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-indigo-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="cpu" class="w-4 h-4"></i> Deep Learning & Frameworks
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-white font-medium">PyTorch</span>
+          <span class="tag-pill">TensorFlow</span>
+          <span class="tag-pill">Hugging Face Transformers</span>
+          <span class="tag-pill">Scikit-Learn</span>
+          <span class="tag-pill">NumPy</span>
+          <span class="tag-pill">Pandas</span>
+          <span class="tag-pill">SciPy</span>
+          <span class="tag-pill">Matrix Calculus</span>
+        </div>
+      </div>
+
+      <!-- 3. LLM Systems, RAG & Agents -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-emerald-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="message-square" class="w-4 h-4"></i> LLM Systems, RAG & Agents
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-emerald-300 font-medium">LangChain</span>
+          <span class="tag-pill">Mistral AI</span>
+          <span class="tag-pill">OpenAI API</span>
+          <span class="tag-pill">Structured JSON</span>
+          <span class="tag-pill">Pydantic Schema</span>
+          <span class="tag-pill">ChromaDB / FAISS</span>
+          <span class="tag-pill">Cross-Encoders</span>
+          <span class="tag-pill">Semantic Caching (Redis)</span>
+        </div>
+      </div>
+
+      <!-- 4. Hardware Acceleration & Inference -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-violet-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="zap" class="w-4 h-4"></i> Hardware & Supercomputing
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-violet-300 font-medium">Intel Gaudi 2 HPUs</span>
+          <span class="tag-pill">Habana SynapseAI</span>
+          <span class="tag-pill">optimum-habana</span>
+          <span class="tag-pill">NVIDIA CUDA & A100</span>
+          <span class="tag-pill">ONNX Runtime (INT8/FP16)</span>
+          <span class="tag-pill">SLURM HPC Clusters</span>
+          <span class="tag-pill">Hardware Profiling</span>
+        </div>
+      </div>
+
+      <!-- 5. Computer Vision & Multimodal -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-rose-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="eye" class="w-4 h-4"></i> Computer Vision & Multimodal
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-rose-300 font-medium">3D Gaussian Splatting (GS-SLAM)</span>
+          <span class="tag-pill">MobileCLIP-S1</span>
+          <span class="tag-pill">Depth Anything / MiDaS</span>
+          <span class="tag-pill">Variational Autoencoders (VAEs)</span>
+          <span class="tag-pill">Denoising Autoencoders</span>
+          <span class="tag-pill">OpenCV</span>
+          <span class="tag-pill">ORB-SLAM3</span>
+        </div>
+      </div>
+
+      <!-- 6. Classical ML, Statistics & MLOps -->
+      <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-3 hover-card-glow">
+        <div class="flex items-center gap-2 text-amber-400 font-mono-code text-sm font-semibold">
+          <i data-lucide="server" class="w-4 h-4"></i> Classical ML & Production MLOps
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-pill text-amber-300 font-medium">XGBoost & LightGBM</span>
+          <span class="tag-pill">Random Forests</span>
+          <span class="tag-pill">SMOTE Imbalanced Learning</span>
+          <span class="tag-pill">SHAP Explainability</span>
+          <span class="tag-pill">PCA & Dimensionality Reduction</span>
+          <span class="tag-pill">Bayesian Decision Theory</span>
+          <span class="tag-pill">Kernel Density Estimation</span>
+          <span class="tag-pill">FastAPI & Streamlit</span>
+          <span class="tag-pill">Docker & AWS</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Publications & Education -->
+  <section id="publications" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Publication -->
+      <div class="lg:col-span-7 space-y-6">
+        <h2 class="text-xs font-mono-code text-cyan-400 tracking-wider uppercase">Research Contributions</h2>
+        <h3 class="text-3xl font-extrabold font-heading">Peer-Reviewed Publications</h3>
+
+        <div class="glass-panel rounded-2xl p-8 border border-white/10 hover-card-glow space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono-code text-xs">IEEE I2CT 2024</span>
+            <span class="text-xs text-gray-400 font-mono-code">Apr 2024</span>
+          </div>
+          <h4 class="text-xl font-bold font-heading text-white">Shark Tank Deal Prediction using Machine Learning Techniques</h4>
+          <p class="text-xs font-mono-code text-gray-400">
+            <strong>Authors:</strong> O. Deodhar, S. Bhatkar, P. Dixit, P. Kulkarni, A. Oak, S. Londhe
+          </p>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Constructed dual Artificial Neural Networks benchmarked against classical ensemble baselines (Random Forest, XGBoost, LightGBM) to forecast investment likelihood and investment valuations with explainability.
+          </p>
+          <a href="https://doi.org/10.1109/I2CT61223.2024.10543666" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono-code text-cyan-400 hover:text-cyan-300 font-semibold">
+            View IEEE Xplore Record <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="lg:col-span-5 space-y-6">
+        <h2 class="text-xs font-mono-code text-indigo-400 tracking-wider uppercase">Academic Pedigree</h2>
+        <h3 class="text-3xl font-extrabold font-heading">Education</h3>
+
+        <div class="space-y-4">
+          <!-- ASU -->
+          <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-2">
+            <div class="flex justify-between items-center text-xs font-mono-code text-indigo-400">
+              <span>Aug 2024 – May 2026</span>
+              <span class="text-emerald-400 font-bold">GPA: 3.81 / 4.00</span>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white">Arizona State University</h4>
+            <div class="text-sm text-gray-300 font-medium">Master of Science in Computer Engineering</div>
+            <div class="text-xs text-gray-400">Specialization: Computer Systems | Tempe, AZ</div>
+          </div>
+
+          <!-- VIIT -->
+          <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-2">
+            <div class="flex justify-between items-center text-xs font-mono-code text-indigo-400">
+              <span>Aug 2019 – May 2023</span>
+              <span class="text-emerald-400 font-bold">GPA: 3.86 / 4.00</span>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white">Vishwakarma Institute of Tech (VIIT)</h4>
+            <div class="text-sm text-gray-300 font-medium">Bachelor of Technology in Computer Engineering</div>
+            <div class="text-xs text-gray-400">Pune, India</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Let's Connect -->
+  <section id="contact" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-panel rounded-3xl p-8 sm:p-14 border border-indigo-500/30 text-center relative overflow-hidden shadow-2xl">
+      <div class="max-w-2xl mx-auto space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Available for AI/ML Opportunities
+        </div>
+
+        <h3 class="text-3xl sm:text-5xl font-extrabold font-heading">Let's Build Something Exceptional Together</h3>
+        <p class="text-gray-300 text-base sm:text-lg">
+          I am eager to contribute my expertise in high-performance inference, enterprise RAG, and applied machine learning to forward-thinking engineering teams.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+          <a href="mailto:deodharojas5@gmail.com" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 font-semibold text-white shadow-xl shadow-indigo-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4"></i> Get in Touch
+          </a>
+          <button class="copy-email-btn px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 text-gray-200 border border-white/10 transition flex items-center gap-2">
+            <i data-lucide="copy" class="w-4 h-4"></i> Copy deodharojas5@gmail.com
+          </button>
+        </div>
+
+        <!-- Social Badges -->
+        <div class="pt-6 flex flex-wrap justify-center gap-6 text-gray-300">
+          <a href="https://linkedin.com/in/ojas-deodhar" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition flex items-center gap-2 text-sm font-medium">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m-1.4 9.74h2.8v-8.37h-2.8v8.37z"/></svg> LinkedIn
+          </a>
+          <a href="https://github.com/Ojas2001" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition flex items-center gap-2 text-sm font-medium">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub
+          </a>
+          <a href="tel:4807438910" class="hover:text-cyan-400 transition flex items-center gap-2 text-sm font-medium">
+            <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (480) 743-8910
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-8 border-t border-white/5 text-center text-xs text-gray-500 font-mono-code">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        Designed & Built by <span class="text-gray-300">Ojas Makarand Deodhar</span> • Hosted on GitHub Pages
+      </div>
+      <div>
+        Engineered with Tailwind CSS & Vanilla JS
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Alert -->
+  <div id="toast-notification" class="toast-container">
+    <div class="glass-panel px-4 py-3 rounded-xl border border-cyan-500/40 text-cyan-300 shadow-2xl flex items-center gap-2 text-sm font-mono-code">
+      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+      <span class="toast-msg">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

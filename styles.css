@@ -1,0 +1,532 @@
+/* Custom Styles for Ojas Deodhar Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --bg-primary: #070913;
+  --bg-secondary: #0d1224;
+  --bg-card: rgba(18, 24, 45, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-cyan: #06b6d4;
+  --accent-indigo: #6366f1;
+  --accent-violet: #8b5cf6;
+  --glow-cyan: rgba(6, 182, 212, 0.25);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.font-mono-code {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-nav {
+  background: rgba(7, 9, 19, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Nav Social Buttons */
+.nav-social-btn {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: all 0.2s ease;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-social-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-social-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid background animation */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Radial Glow Orbs */
+.glow-orb-1 {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-2 {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hover glow cards */
+.hover-card-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-card-glow:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.2);
+}
+
+/* Pill buttons */
+.tag-pill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.tag-pill:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #38bdf8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Toast alert */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  transition: all 0.3s ease;
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toast-container.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   Comprehensive Light Mode Design System
+   ========================================================================== */
+
+.light-theme {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --border-subtle: rgba(226, 232, 240, 0.9);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent-cyan: #0284c7;
+  --accent-indigo: #4f46e5;
+  --accent-violet: #7c3aed;
+  --glow-cyan: rgba(2, 132, 199, 0.08);
+}
+
+body.light-theme {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Headings & High-Contrast Titles */
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6,
+.light-theme .text-white,
+.light-theme .text-gray-100,
+.light-theme strong.text-white {
+  color: #0f172a !important;
+}
+
+.light-theme .text-gray-200 {
+  color: #1e293b !important;
+}
+
+/* Body & Description Texts (WCAG AAA readability) */
+.light-theme .text-gray-300 {
+  color: #334155 !important;
+}
+
+.light-theme .text-gray-400 {
+  color: #64748b !important;
+}
+
+.light-theme .text-gray-500 {
+  color: #64748b !important;
+}
+
+/* Dynamic Typing Text & Vibrant Header Gradient */
+.light-theme #typed-text {
+  color: #0284c7 !important;
+}
+
+.light-theme .text-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .text-gradient-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Accent Color Overrides in Light Theme */
+.light-theme .text-cyan-300,
+.light-theme .text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+.light-theme .text-indigo-300,
+.light-theme .text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+.light-theme .text-emerald-300,
+.light-theme .text-emerald-400 {
+  color: #059669 !important;
+}
+
+.light-theme .text-violet-300,
+.light-theme .text-violet-400 {
+  color: #7c3aed !important;
+}
+
+.light-theme .text-amber-300,
+.light-theme .text-amber-400 {
+  color: #d97706 !important;
+}
+
+.light-theme .text-rose-300,
+.light-theme .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* Glass Panels & Project Cards */
+.light-theme .glass-panel {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.95) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03) !important;
+}
+
+.light-theme .hover-card-glow:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 16px 32px -8px rgba(99, 102, 241, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Inner nested boxes (formerly black overlays) */
+.light-theme .bg-black\/40,
+.light-theme .bg-black\/50 {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.light-theme .bg-white\/5 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme .bg-white\/10 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme .border-white\/5,
+.light-theme .border-white\/10,
+.light-theme .border-white\/20 {
+  border-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+/* Navigation Bar in Light Mode */
+.light-theme .glass-nav {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.95) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.light-theme .glass-nav a {
+  color: #475569 !important;
+}
+
+.light-theme .glass-nav a:hover {
+  color: #0284c7 !important;
+}
+
+.light-theme .glass-nav .font-heading {
+  color: #0f172a !important;
+}
+
+.light-theme .bg-indigo-950\/80 {
+  background-color: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #4338ca !important;
+}
+
+/* Social & Theme Buttons in Nav */
+.light-theme .nav-social-btn {
+  color: #334155 !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-theme .nav-social-btn:hover {
+  color: #0284c7 !important;
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: rgba(2, 132, 199, 0.35) !important;
+}
+
+/* Badges & Category Labels */
+.light-theme .bg-indigo-500\/10,
+.light-theme .bg-indigo-500\/20 {
+  background-color: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #4338ca !important;
+}
+
+.light-theme .bg-cyan-500\/10,
+.light-theme .bg-cyan-500\/20 {
+  background-color: #ecfeff !important;
+  border-color: #a5f3fc !important;
+  color: #0891b2 !important;
+}
+
+.light-theme .bg-emerald-500\/10,
+.light-theme .bg-emerald-500\/20 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #047857 !important;
+}
+
+.light-theme .bg-violet-500\/10,
+.light-theme .bg-violet-500\/20 {
+  background-color: #f5f3ff !important;
+  border-color: #ddd6fe !important;
+  color: #6d28d9 !important;
+}
+
+.light-theme .bg-amber-500\/20 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #b45309 !important;
+}
+
+.light-theme .bg-rose-500\/20 {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+  color: #be123c !important;
+}
+
+/* Tag Pills */
+.light-theme .tag-pill {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-weight: 500;
+}
+
+.light-theme .tag-pill:hover {
+  background: #eef2ff;
+  border-color: #818cf8;
+  color: #4338ca;
+}
+
+/* Project Filter Buttons */
+.light-theme .filter-btn {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.light-theme .filter-btn:hover {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme .filter-btn.bg-indigo-600 {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 4px 12px -2px rgba(79, 70, 229, 0.35) !important;
+}
+
+/* System Explorer Tab Buttons */
+.light-theme .sys-tab-btn {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.light-theme .sys-tab-btn:hover {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme .sys-tab-btn.bg-indigo-600\/30 {
+  background: #eef2ff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px -1px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Secondary CTA Buttons */
+.light-theme a.glass-panel,
+.light-theme button.glass-panel {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme a.glass-panel:hover,
+.light-theme button.glass-panel:hover {
+  background: #f8fafc !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+/* Soft Atmosphere in Light Theme */
+.light-theme .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.light-theme .glow-orb-1 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.07) 0%, rgba(99, 102, 241, 0) 70%);
+}
+
+.light-theme .glow-orb-2 {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0) 70%);
+}
+
+/* Contact Card Container */
+.light-theme #contact .glass-panel {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* Toast Container */
+.light-theme #toast-notification .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid #38bdf8 !important;
+  color: #0369a1 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Footer in Light Theme */
+.light-theme footer {
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+  color: #64748b !important;
+}
+
+.light-theme footer .text-gray-300 {
+  color: #1e293b !important;
+}
+
+/* Inline Code Badges */
+.light-theme code {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #0369a1;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+}
+
+/* Custom Scrollbar in Light Theme */
+.light-theme::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+.light-theme::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+.light-theme::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
